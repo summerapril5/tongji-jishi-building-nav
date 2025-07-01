@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>房间信息</title>
+<style>
+    /* 导航样式 */
+    #sideNav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #a8f47d;
+        padding: 40px 20px 20px; /* 将 padding-top 改为 30px */
+        box-sizing: border-box;
+    }
+    #sideNav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    #sideNav li {
+        margin-bottom: 10px;
+    }
+    #sideNav a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        font-size: 16px; /* 设置导航链接的文字大小为 16 像素 */
+        padding-left: 20px; /* 设置导航链接文本与左边界的填充为 10px */
+    }
+    #sideNav a:hover {
+        color: #007bff;
+    }
+    /* 目标楼层样式 */
+    .floor {
+        margin-top: 200px; /* 用于测试滚动效果，实际情况根据需要调整 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-size: 18px; /* 设置目标楼层文字的大小为 18 像素 */
+    padding-left: 80px; /* 设置目标楼层文字与左边界的填充为 20px */
+    background-color: #f7f7f7; /* 设置背景色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    border-radius: 5px; /* 添加圆角效果 */
+    }
+
+    #returnButton {
+        margin-top: 0px;
+        margin-bottom: 20px; /* 底部距离20px */
+        font-size: 18px;
+        color: #fff;
+        background-color: #007bff; /* 按钮背景色 */
+        border: none;
+        padding: 10px 20px; /* 按钮内边距 */
+        border-radius: 5px; /* 圆角 */
+        cursor: pointer;
+    }
+    #returnButton:hover {
+        background-color: #0056b3; /* 鼠标悬停时的背景色 */
+    }
+    /* 激活状态样式 */
+    #sideNav a.active {
+        color: red; /* 设置激活状态的链接文字颜色为红色 */
+    }
+</style>
+
+</head>
+<body>
+
+<!-- 导航 -->
+<div id="sideNav">
+    <ul>
+        <div id="returnButton">BACK</div>
+        <li><a href="#456">456</a></li>
+        <li><a href="#455">455</a></li>
+        <li><a href="#451">451</a></li>
+        <li><a href="#450">450</a></li>
+        <li><a href="#448">448</a></li>
+        <li><a href="#446">446</a></li>
+        <li><a href="#444">444</a></li>
+        <li><a href="#443">443</a></li>
+        <li><a href="#442">442</a></li>
+        <li><a href="#441">441</a></li>
+        <li><a href="#434">434</a></li>
+        <li><a href="#432">432</a></li>
+        <li><a href="#430">430</a></li>
+        <li><a href="#428">428</a></li>
+        <li><a href="#426">426</a></li>
+        <li><a href="#419">419</a></li>
+        <li><a href="#418">418</a></li>
+        <li><a href="#417">417</a></li>
+        <li><a href="#416">416</a></li>
+        <li><a href="#414">414</a></li>
+        <li><a href="#412">412</a></li>
+        <li><a href="#410">410</a></li>
+        <li><a href="#409">409</a></li>
+        <li><a href="#408">408</a></li>
+        <li><a href="#407">407</a></li>
+        
+        
+    </ul>
+</div>
+
+<!-- 内容区域 -->
+
+<div style="margin-left: 220px;"> <!-- 留出左侧导航的空间 -->
+
+    <!-- 目标楼层 -->
+    <div id="456" class="floor">
+        <h2>456</h2>
+        <img src="photo\456.jpg"  height="400">
+        <p>类型：学院办公室</p>
+        <p>用途：科研活动、办公</p>
+        <p>老师：张晓雅 闫鹏 钱银飞 林伊凡 张晶</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="455" class="floor">
+        <h2>455</h2>
+        <img src="photo\455.jpg"  height="400">
+        <p>类型：会议室</p>
+        <p>用途：会议</p>
+        <p>老师：暂无</p>
+        <p>状态：空闲</p>
+    </div>
+
+    <div id="451" class="floor">
+        <h2>451</h2>
+        <img src="photo\451L.jpg"  height="400">
+        <img src="photo\451R.jpg"  height="400">
+        <p>类型：党委办公室</p>
+        <p>用途：办公</p>
+        <p>老师：穆斌（副院长） 陈荣（副书记）</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="450" class="floor">
+        <h2>450</h2>
+        <img src="photo\450.jpg"  height="400">
+        <p>类型：小型会议室</p>
+        <p>用途：会议</p>
+        <p>老师：暂无</p>
+        <p>状态：空闲</p>
+    </div>
+
+    <div id="448" class="floor">
+        <h2>448</h2>
+        <img src="photo\448.jpg"  height="400">
+        <p>暂无数据</p>
+        
+    </div>
+
+    <div id="446" class="floor">
+        <h2>446</h2>
+        <img src="photo\446A.jpg"  height="400">
+        <img src="photo\4546B.jpg"  height="400">
+        <p>类型：学生工作办公室  创新管理办公室</p>
+        <p>用途：办公</p>
+        <p>老师：葛蕾，焦嘉欣，钟梦莹，陈璞皎，严海洲</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="444" class="floor">
+        <h2>444</h2>
+        <img src="photo\444.jpg"  height="400">
+        <p>暂无数据</p>
+        
+    </div>
+
+    <div id="443" class="floor">
+        <h2>443</h2>
+        <img src="photo\443.jpg"  height="400">
+        <img src="photo\443B.jpg"  height="400">
+        <p>类型：办公室</p>
+        <p>用途：办公</p>
+        <p>老师：陈梁，杨旻</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="442" class="floor">
+        <h2>442</h2>
+        <img src="photo\442L.jpg"  height="400">
+        <img src="photo\442R.jpg"  height="400">
+        <p>类型：教育部工程研究中心实验室</p>
+        <p>用途：科研</p>
+        <p>老师：暂无数据</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="441" class="floor">
+        <h2>441</h2>
+        <img src="photo\442L.jpg"  height="400">
+        <img src="photo\442R.jpg"  height="400">
+        <p>类型：教育部工程研究中心实验室</p>
+        <p>用途：科研</p>
+        <p>老师：暂无数据</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="434" class="floor">
+        <h2>434</h2>
+        <img src="photo\434.jpg"  height="400">
+        <p>类型：教室</p>
+        <p>用途：教学</p>
+        <p>老师：暂无</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="434" class="floor">
+        <h2>434</h2>
+        <img src="photo\434.jpg"  height="400">
+        <p>类型：教室</p>
+        <p>用途：教学</p>
+        <p>老师：暂无</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="432" class="floor">
+        <h2>432</h2>
+        <img src="photo\432A.jpg"  height="400">
+        <img src="photo\432B.jpg"  height="400">
+        <p>类型：党员之家</p>
+        <p>用途：会议，办公</p>
+        <p>老师：暂无</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="430" class="floor">
+        <h2>430</h2>
+        <img src="photo\430A.jpg"  height="400">
+        <img src="photo\430B.jpg"  height="400">
+        <p>类型：多媒体教学机房</p>
+        <p>用途：教学</p>
+        <p>老师：杨旻，严海洲</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="428" class="floor">
+        <h2>428</h2>
+        <p>暂无数据</p>
+        
+    </div>
+
+    <div id="426" class="floor">
+        <h2>426</h2>
+        <img src="photo\426A.jpg"  height="400">
+        <img src="photo\426B.jpg"  height="400">
+        <p>类型：多媒体教学机房</p>
+        <p>用途：教学</p>
+        <p>老师：杨旻，严海洲</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="419" class="floor">
+        <h2>419</h2>
+        <img src="photo\419A.jpg"  height="400">
+        <img src="photo\419B.jpg"  height="400">
+        <p>类型：计算机系统实验室</p>
+        <p>用途：实验，科研，教学</p>
+        <p>老师：张晶，严海洲</p>
+        <p>状态：正在使用</p>
+    </div>
+    
+    <div id="418" class="floor">
+        <h2>418</h2>
+        <img src="photo\418A.jpg"  height="400">
+        <img src="photo\418B.jpg"  height="400">
+        <p>类型：教授办公室</p>
+        <p>用途：办公</p>
+        <p>老师：张林，蒋健慧，刘琴</p>
+        <p>状态：正在使用</p>
+    </div>
+  
+    <div id="417" class="floor">
+        <h2>417</h2>
+        <img src="photo\417.jpg"  height="400">
+        <p>类型：会议室</p>
+        <p>用途：会议</p>
+        <p>老师：暂无</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="416" class="floor">
+        <h2>416</h2>
+        <img src="photo\416A.jpg"  height="400">
+        <img src="photo\416B.jpg"  height="400">
+        <p>类型：会议室</p>
+        <p>用途：会议</p>
+        <p>老师：暂无</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="414" class="floor">
+        <h2>414</h2>
+        <p>类型：硬件实验室</p>
+        <p>用途：实验</p>
+        <p>老师：暂无</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="412" class="floor">
+        <h2>412</h2>
+        <img src="photo\412A.jpg"  height="400">
+        <p>类型：教研室</p>
+        <p>用途：教研</p>
+        <p>老师：刘岩，张惠娟，孙萍，罗怡桂</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="410" class="floor">
+        <h2>410</h2>
+        <img src="photo\410.jpg"  height="400">
+        <p>类型：教研室</p>
+        <p>用途：教研</p>
+        <p>老师：王冬青，李江峰，夏波涌，张颖</p>
+        <p>状态：正在使用</p>
+    </div>
+
+    <div id="409" class="floor">
+        <h2>409</h2>
+        <p>暂无数据</p>
+        
+    </div>
+
+    <div id="408" class="floor">
+        <h2>408</h2>
+        <img src="photo\408A.jpg"  height="400">
+        <img src="photo\408B.jpg"  height="400">
+        <p>暂无数据</p>
+    </div>
+
+    <div id="407" class="floor">
+        <h2>407</h2>
+        <img src="photo\407A.jpg"  height="400">
+        <img src="photo\407B.jpg"  height="400">
+        <img src="photo\407C.jpg"  height="400">
+        <p>类型：研究生工作室</p>
+        <p>用途：科研，休息</p>
+        <p>老师：赵生捷，严海洲</p>
+        <p>状态：正在使用</p>
+    </div>
+
+   
+</div>
+
+
+<script>
+    // 获取返回按钮元素
+    var returnButton = document.getElementById("returnButton");
+    // 添加点击事件监听器
+    returnButton.addEventListener("click", function() {
+        // 跳转到另一个页面
+        window.location.href = "map.html";
+    });
+</script>
+<script>
+window.onload = function() {
+    // 获取左侧导航栏的容器
+    var sideNav = document.getElementById('sideNav');
+    var navLinks = sideNav.querySelectorAll('a');
+
+    // 获取右侧内容区域的容器
+    var contentSections = document.querySelectorAll('.floor');
+
+    // 给导航栏的每个链接添加点击事件监听器
+    for (var i = 0; i <navLinks.length; i++) {
+        navLinks[i].index = i;
+        navLinks[i].onclick = function() {
+            var targetIndex = this.index;
+            var targetSection = contentSections[targetIndex];
+            window.scrollTo({
+                top: targetSection.offsetTop - 20, // 考虑到导航栏的高度，向上偏移 20px
+                behavior: 'smooth' // 平滑滚动
+            });
+        };
+    }
+
+    // 滚动时更新导航栏链接的状态
+    window.onscroll = function() {
+        var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        for (var i = 0; i < contentSections.length; i++) {
+            if (scrollPosition >= contentSections[i].offsetTop - 40) {
+                // 清除所有链接的激活状态
+                for (var j = 0; j < navLinks.length; j++) {
+                    navLinks[j].classList.remove('active');
+                }
+                // 将当前部分对应的链接设置为激活状态
+                navLinks[i].classList.add('active');
+            }
+        }
+    };
+};
+</script>
+</body>
+</html>

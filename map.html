@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>济事楼四层导航</title>
+<style>
+    /* 使用 CSS 来设置图片和按钮的样式和位置 */
+    #container {
+        position: relative;
+        width:max-content; /* 设置容器宽度 */
+        margin: 0 auto; /* 居中显示 */
+    }
+    #myImage {
+        width: 800px; /* 图片宽度 */
+        height: auto; /* 图片高度自适应 */
+    }
+    .button {
+        position: absolute;
+        padding: 10px 20px;/* 按钮内边距 */
+        background-color: transparent; /* 按钮背景颜色 */
+        color: #2cc988; /* 按钮文字颜色 */
+        border: 3px solid #007bff; /* 添加边框 */
+        cursor: pointer;
+        font-weight: bold; /* 设置按钮文字为粗体 */
+        display: flex; /* 使用 Flexbox 布局 */
+        justify-content: center; /* 水平居中对齐 */
+        align-items: center; /* 垂直居中对齐 */
+    }
+    .rotate {
+        transform: rotate(40deg); /* 添加旋转效果 */
+    }
+    #title {
+        text-align: center; /* 标题居中 */
+        font-family: "黑体", sans-serif; /* 使用黑体字体 */
+        font-size: 32px; /* 标题字体大小 */
+        color: #000; /* 标题文字颜色 */
+    }
+    /* 分割线样式 */
+    #divider {
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        margin-bottom: 20px; /* 添加下边距 */
+    }
+
+    /* 搜索框样式 */
+    #searchBox {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        margin: 20px;
+        width: 20%;
+        height: 20px;
+        border-radius: 5px; /* 添加圆角 */
+        background-color: #fff; /* 背景颜色 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    }
+    /* 搜索按钮样式 */
+    #searchButton {
+        position: absolute;
+        top: 0;
+        right: 0px; /* 搜索框宽度 + 搜索框和按钮之间的间距 */
+        margin: 20px;
+        height: 24px; /* 为了让按钮与搜索框对齐，设置稍微大一些的高度 */
+        border: none;
+        background-color: #6a6565; /* 按钮背景颜色 */
+        color: #fff; /* 文字颜色 */
+        border-radius: 5px; /* 添加圆角 */
+        cursor: pointer;
+    }
+
+    /* 按钮大小 */
+    .large {
+        width: 60px; /* 设置按钮宽度 */
+        height: 50px; /* 设置按钮高度 */
+        font-size: 25px; /* 设置按钮文字大小 */
+        
+
+    }
+    .small {
+        width: 44px; /* 设置按钮宽度 */
+        height: 32px; /* 设置按钮高度 */
+        font-size: 16px; /* 设置按钮文字大小 */
+        
+    }
+
+     /* 按钮位置 */
+    .button.left-418 {
+        top: 270px;
+        left: 130px;
+    }
+    .button.left-416 {
+        top: 350px;
+        left: 130px;
+    }
+    .button.left-419 {
+        top: 270px;
+        left: 230px;
+    }
+    .button.left-417 {
+        top: 350px;
+        left: 230px;
+    }
+    .button.left-414 {
+        top: 440px;
+        left: 140px;
+    }
+
+    .button.bottom-412 {
+        top: 615px;
+        left: 210px;
+    }
+    .button.bottom-410 {
+        top: 650px;
+        left: 260px;
+    }
+    .button.bottom-408 {
+        top: 690px;
+        left: 305px;
+        transform-origin: center; 
+    }
+    .button.bottom-409 {
+        top: 540px;
+        left: 310px;
+    }
+    .button.bottom-407 {
+        top: 590px;
+        left: 380px;
+    }
+
+    .button.top-426 {
+        top: 95px;
+        left: 205px;
+    }
+    .button.top-428 {
+        top: 95px;
+        left: 255px;
+    }
+    .button.top-430 {
+        top: 105px;
+        left: 350px;
+    }
+
+    .button.right-442 {
+        top: 210px;
+        left: 462px;
+    }
+    .button.right-441 {
+        top: 260px;
+        left: 540px;
+    }
+    .button.right-443 {
+        top: 320px;
+        left: 544px;
+    }
+    .button.right-444 {
+        top: 280px;
+        left: 465px;
+    }
+    .button.right-446 {
+        top: 330px;
+        left: 465px;
+    }
+    .button.right-448 {
+        top: 380px;
+        left: 475px;
+    }
+    .button.right-450 {
+        top: 430px;
+        left: 510px;
+    }
+    .button.right-451 {
+        top: 395px;
+        left: 580px;
+    }
+    .button.right-455 {
+        top: 450px;
+        left: 680px;
+    }
+    .button.right-456 {
+        top: 515px;
+        left: 635px;
+    }
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+
+    <h1 id="title">济事楼4层导航</h1>
+    <div id="divider"></div>
+    <!-- 搜索框 -->
+    <form action="information.html" method="GET">
+        <input type="text" id="searchBox" placeholder="输入房间信息">
+        <button type="submit" id="searchButton">搜索</button>
+    </form>
+    
+    <img id="myImage" src="photo\background.jpg" alt="Example Image">
+
+    <!-- 在容器内添加按钮 -->
+    <button class="button left-418 large" onclick="location.href='information.html#418'">418</button>
+    <button class="button left-416 large" onclick="location.href='information.html#416'">416</button>
+    <button class="button left-419 large" onclick="location.href='information.html#419'">419</button>
+    <button class="button left-417 large" onclick="location.href='information.html#417'">417</button>
+    <button class="button left-414 large" onclick="location.href='information.html#414'">414</button>
+
+    <button class="button bottom-412 small rotate" onclick="location.href='information.html#412'">412</button>
+    <button class="button bottom-410 small rotate" onclick="location.href='information.html#410'">410</button>
+    <button class="button bottom-409 large rotate" onclick="location.href='information.html#409'">409</button>
+    <button class="button bottom-408 small rotate" onclick="location.href='information.html#408'">408</button>
+    <button class="button bottom-407 small rotate" onclick="location.href='information.html#407'">407</button>
+    
+    <button class="button top-426 small" onclick="location.href='information.html#426'">426</button>
+    <button class="button top-428 small" onclick="location.href='information.html#428'">428</button>
+    <button class="button top-430 large" onclick="location.href='information.html#430'">430</button>
+
+    <button class="button right-442 large" onclick="location.href='information.html#442'">442</button>
+    <button class="button right-441 large" onclick="location.href='information.html#441'">441</button>
+    <button class="button right-443 small" onclick="location.href='information.html#443'">443</button>
+    <button class="button right-444 small" onclick="location.href='information.html#444'">444</button>
+    <button class="button right-446 small" onclick="location.href='information.html#446'">446</button>
+    <button class="button right-448 small" onclick="location.href='information.html#448'">448</button>
+    <button class="button right-450 large rotate" onclick="location.href='information.html#450'">450</button>
+    <button class="button right-451 small rotate" onclick="location.href='information.html#451'">451</button>
+    <button class="button right-455 small rotate" onclick="location.href='information.html#455'">455</button>
+    <button class="button right-456 small rotate" onclick="location.href='information.html#456'">456</button>
+
+
+</body>
+</html>
+</div>
+
+</body>
+</html>
